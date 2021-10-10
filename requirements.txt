@@ -1,0 +1,4 @@
+PyCryptodome
+numpy
+pillow
+click
