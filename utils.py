@@ -1,13 +1,23 @@
 from math import ceil
 
 import numpy as np
+import sys
 
 byte_depth_to_dtype = {1: np.uint8, 2: np.uint16, 4: np.uint32, 8: np.uint64}
-
 
 def roundup(x, base=1):
     return int(ceil(x / base)) * base
 
+def str_to_bytes(x, charset=sys.getdefaultencoding(), errors="strict"):
+    if x is None:
+        return None
+    if isinstance(x, (bytes, bytearray, memoryview)):  # noqa
+        return bytes(x)
+    if isinstance(x, str):
+        return x.encode(charset, errors)
+    if isinstance(x, int):
+        return str(x).encode(charset, errors)
+    raise TypeError("Expected bytes")
 
 def lsb_interleave_bytes(carrier, payload, num_lsb, truncate=False, byte_depth=1):
     """

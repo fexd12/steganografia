@@ -1,4 +1,5 @@
 PyCryptodome
 numpy
 pillow
-click
+trio
+pyfuse3

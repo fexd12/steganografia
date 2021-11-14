@@ -34,8 +34,6 @@ class Crypto:
         '''
         Encrypt some data.  Input can be bytes or a string (which will be encoded
         using UTF-8).
-        @param password: The secret value used as the basis for a key.
-        This should be as long as varied as possible.  Try to avoid common words.
         @param data: The data to be encrypted.
         @return: The encrypted data, as bytes.
         '''
@@ -54,12 +52,9 @@ class Crypto:
         
         return data_returned
 
-
     def decrypt(self, data):
         '''
         Decrypt some data.  Input must be bytes.
-        @param password: The secret value used as the basis for a key.
-        This should be as long as varied as possible.  Try to avoid common words.
         @param data: The data to be decrypted, typically as bytes.
         @return: The decrypted data, as bytes.  If the original message was a
         string you can re-create that using `result.decode('utf8')`.
