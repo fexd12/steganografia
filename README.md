@@ -8,7 +8,7 @@
 
 2- install fuse3
 
-`apt install fuse3`
+`apt install fuse3 libfuse3 libfuse3-dev`
 
 3- install pip requirements
 
