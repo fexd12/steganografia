@@ -1,6 +1,6 @@
 # steganografia
 
-#How to use 
+#How to use
 
 1- install nautilus, if you haven't already installed
 
@@ -10,6 +10,10 @@
 
 `apt install fuse3`
 
-and run 
+3- install pip requirements
 
-` python main.py {source for fuse3} {mountpoint for fuse3} {password for cryptography} {picture's path}`
+`pip -r requirements.py`
+
+and run
+
+`python main.py {mountpoint for fuse3} {source for fuse3} {password for cryptography} {picture's path}`
